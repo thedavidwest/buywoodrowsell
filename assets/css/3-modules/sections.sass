@@ -1,0 +1,81 @@
+section
+  +outer-container(80%)
+  margin-top: 145px
+
+  h1
+    color: #FFF
+    font:
+      weight: 100
+      size: 24px
+    letter-spacing: .15em
+    text-align: center
+    text-transform: uppercase
+    margin-bottom: 85px
+
+  .divider
+    color: $trans-white-dark
+    width: 100%
+    margin: 20px auto
+    overflow: hidden
+    text-align: center
+    line-height: 1.2em
+    &:before
+      content: ""
+      vertical-align: top
+      display: inline-block
+      width: 50%
+      height: 0.65em
+      border-bottom: 1px solid $trans-white
+      margin: 0 2% 0 -55%
+    &:after
+      content: ""
+      vertical-align: top
+      display: inline-block
+      width: 50%
+      height: 0.65em
+      border-bottom: 1px solid $trans-white
+      margin: 0 2% 0 -55%
+      margin: 0 -55% 0 2%
+
+section.whyus
+  p
+    +outer-container(90%)
+    color: $trans-white-dark
+    font:
+      weight: 100
+      size: 14px
+    letter-spacing: .15em
+    text-align: justify
+
+    span
+      text-transform: uppercase
+
+section.portfolio
+
+section.contact
+  p
+    +outer-container(90%)
+    color: $trans-white-dark
+    font:
+      weight: 100
+      size: 14px
+    letter-spacing: .15em
+    text-align: justify
+
+  .cta--email
+    text-align: center
+    margin-top: 30px
+    margin-bottom: 30px
+    font:
+      weight: 100
+      size: 18px
+    color: #FFF
+    letter-spacing: .15em
+    text-transform: uppercase
+    border: 1px solid $trans-white
+    border-radius: 4px
+    padding: 15px
+    +white-link
+    transition: .3s ease-in-out
+    &:hover
+      background: $trans-white
