@@ -1,1 +1,2 @@
-Personal portfolio for **David West**
+Portfolio Website for **BUY WOODROW SELL**
+*Buy, Sell... Buy. Sell.*
