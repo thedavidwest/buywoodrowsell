@@ -1,5 +1,4 @@
 section
-  +outer-container(80%)
   margin-top: 145px
 
   h1
@@ -14,7 +13,7 @@ section
 
   .divider
     color: $trans-white-dark
-    width: 100%
+    width: 90%
     margin: 20px auto
     overflow: hidden
     text-align: center
@@ -37,9 +36,11 @@ section
       margin: 0 2% 0 -55%
       margin: 0 -55% 0 2%
 
+  p
+    +outer-container(75%)
+
 section.whyus
   p
-    +outer-container(90%)
     color: $trans-white-dark
     font:
       weight: 100
@@ -51,21 +52,21 @@ section.whyus
       text-transform: uppercase
 
 section.portfolio
-
-section.contact
-  p
-    +outer-container(90%)
-    color: $trans-white-dark
-    font:
-      weight: 100
-      size: 14px
-    letter-spacing: .15em
-    text-align: justify
-
-  .cta--email
+  .divider
+    margin-bottom: 75px
+  .recent-group
+    +outer-container(75%)
+    .recent-ind
+      +span-columns(6)
+      text-align: center
+      margin-bottom: 50px
+      transition: all .2s ease-in-out
+      &:hover
+        transform: scale(1.1)
+  .cta--portfolio
+    +outer-container(25%)
     text-align: center
-    margin-top: 30px
-    margin-bottom: 30px
+    margin-top: 45px
     font:
       weight: 100
       size: 18px
@@ -79,3 +80,51 @@ section.contact
     transition: .3s ease-in-out
     &:hover
       background: $trans-white
+
+section.contact
+  p
+    color: $trans-white-dark
+    font:
+      weight: 100
+      size: 14px
+    letter-spacing: .15em
+    text-align: justify
+
+  .cta--email
+    +outer-container(30%)
+    text-align: center
+    margin: 30px auto
+    font:
+      weight: 100
+      size: 18px
+    color: #FFF
+    letter-spacing: .15em
+    text-transform: uppercase
+    border: 1px solid $trans-white
+    border-radius: 4px
+    padding: 15px
+    +white-link
+    transition: .3s ease-in-out
+    &:hover
+      background: $trans-white
+
+  #mainselection
+    overflow: hidden
+    width: 350px
+    -moz-border-radius: 9px 9px 9px 9px
+    -webkit-border-radius: 9px 9px 9px 9px
+    border-radius: 9px 9px 9px 9px
+    box-shadow: 1px 1px 11px #330033
+    background: url(“arrow.gif”) no-repeat scroll 319px 5px #58B14C
+
+    select
+      border: 0
+      color: #EEE
+      background: transparent
+      font-size: 20px
+      font-weight: bold
+      padding: 2px 10px
+      width: 378px
+      width: 350px
+      background: $trans-white
+      -webkit-appearance: none

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
@@ -247,7 +248,8 @@ label,
 select {
   display: block;
   font-family: "Roboto", helvetica, "helvetica neue", arial, sans-serif !important;
-  font-size: 1em; }
+  font-size: 1em;
+  background: rgba(255, 255, 255, 0.25); }
 
 label {
   font-weight: 600;
@@ -388,18 +390,11 @@ picture {
   max-width: 100%; }
 
 body {
-  background-color: #173e4f;
-  background-image: -webkit-linear-gradient(#173e4f, #1b5b9b);
-  background-image: linear-gradient(#173e4f, #1b5b9b);
-  max-width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+  background-color: #173f4f;
+  background-image: -webkit-linear-gradient(#173f4f, #1b5b9b);
+  background-image: linear-gradient(#173f4f, #1b5b9b);
   font-family: "Roboto", sans-serif;
   font-color: rgba(255, 255, 255, 0.25); }
-  body::after {
-    clear: both;
-    content: "";
-    display: table; }
 
 header {
   max-width: 90%;
@@ -428,6 +423,9 @@ header {
     letter-spacing: 0.15em;
     text-transform: uppercase; }
   header .cta--portfolio {
+    max-width: 30%;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 185px;
     font-weight: 100;
     font-size: 18px;
@@ -438,6 +436,10 @@ header {
     border-radius: 4px;
     padding: 15px;
     transition: 0.3s ease-in-out; }
+    header .cta--portfolio::after {
+      clear: both;
+      content: "";
+      display: table; }
     header .cta--portfolio a {
       color: #FFF;
       transition: 0.3s ease-in-out; }
@@ -452,14 +454,7 @@ footer {
     text-align: center; }
 
 section {
-  max-width: 80%;
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 145px; }
-  section::after {
-    clear: both;
-    content: "";
-    display: table; }
   section h1 {
     color: #FFF;
     font-weight: 100;
@@ -470,7 +465,7 @@ section {
     margin-bottom: 85px; }
   section .divider {
     color: rgba(255, 255, 255, 0.5);
-    width: 100%;
+    width: 90%;
     margin: 20px auto;
     overflow: hidden;
     text-align: center;
@@ -492,40 +487,52 @@ section {
       border-bottom: 1px solid rgba(255, 255, 255, 0.25);
       margin: 0 2% 0 -55%;
       margin: 0 -55% 0 2%; }
+  section p {
+    max-width: 75%;
+    margin-left: auto;
+    margin-right: auto; }
+    section p::after {
+      clear: both;
+      content: "";
+      display: table; }
 
 section.whyus p {
-  max-width: 90%;
-  margin-left: auto;
-  margin-right: auto;
   color: rgba(255, 255, 255, 0.5);
   font-weight: 100;
   font-size: 14px;
   letter-spacing: 0.15em;
   text-align: justify; }
-  section.whyus p::after {
-    clear: both;
-    content: "";
-    display: table; }
   section.whyus p span {
     text-transform: uppercase; }
 
-section.contact p {
-  max-width: 90%;
+section.portfolio .divider {
+  margin-bottom: 75px; }
+section.portfolio .recent-group {
+  max-width: 75%;
   margin-left: auto;
-  margin-right: auto;
-  color: rgba(255, 255, 255, 0.5);
-  font-weight: 100;
-  font-size: 14px;
-  letter-spacing: 0.15em;
-  text-align: justify; }
-  section.contact p::after {
+  margin-right: auto; }
+  section.portfolio .recent-group::after {
     clear: both;
     content: "";
     display: table; }
-section.contact .cta--email {
+  section.portfolio .recent-group .recent-ind {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 48.821174201%;
+    text-align: center;
+    margin-bottom: 50px;
+    transition: all 0.2s ease-in-out; }
+    section.portfolio .recent-group .recent-ind:last-child {
+      margin-right: 0; }
+    section.portfolio .recent-group .recent-ind:hover {
+      transform: scale(1.1); }
+section.portfolio .cta--portfolio {
+  max-width: 25%;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 45px;
   font-weight: 100;
   font-size: 18px;
   color: #FFF;
@@ -535,8 +542,153 @@ section.contact .cta--email {
   border-radius: 4px;
   padding: 15px;
   transition: 0.3s ease-in-out; }
+  section.portfolio .cta--portfolio::after {
+    clear: both;
+    content: "";
+    display: table; }
+  section.portfolio .cta--portfolio a {
+    color: #FFF;
+    transition: 0.3s ease-in-out; }
+  section.portfolio .cta--portfolio:hover {
+    background: rgba(255, 255, 255, 0.25); }
+
+section.contact p {
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 100;
+  font-size: 14px;
+  letter-spacing: 0.15em;
+  text-align: justify; }
+section.contact .cta--email {
+  max-width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin: 30px auto;
+  font-weight: 100;
+  font-size: 18px;
+  color: #FFF;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 4px;
+  padding: 15px;
+  transition: 0.3s ease-in-out; }
+  section.contact .cta--email::after {
+    clear: both;
+    content: "";
+    display: table; }
   section.contact .cta--email a {
     color: #FFF;
     transition: 0.3s ease-in-out; }
   section.contact .cta--email:hover {
     background: rgba(255, 255, 255, 0.25); }
+section.contact #mainselection {
+  overflow: hidden;
+  width: 350px;
+  -moz-border-radius: 9px 9px 9px 9px;
+  -webkit-border-radius: 9px 9px 9px 9px;
+  border-radius: 9px 9px 9px 9px;
+  box-shadow: 1px 1px 11px #330033;
+  background: url(“arrow.gif”) no-repeat scroll 319px 5px #58B14C; }
+  section.contact #mainselection select {
+    border: 0;
+    color: #EEE;
+    background: transparent;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 2px 10px;
+    width: 378px;
+    width: 350px;
+    background: rgba(255, 255, 255, 0.25);
+    -webkit-appearance: none; }
+
+form {
+  max-width: 75%;
+  margin-left: auto;
+  margin-right: auto; }
+  form::after {
+    clear: both;
+    content: "";
+    display: table; }
+  form input[type="text"], form textarea {
+    background: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.5); }
+  form .row-1 {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto; }
+    form .row-1::after {
+      clear: both;
+      content: "";
+      display: table; }
+    form .row-1 input[type="text"] {
+      float: left;
+      display: block;
+      margin-right: 2.3576515979%;
+      width: 48.821174201%; }
+      form .row-1 input[type="text"]:last-child {
+        margin-right: 0; }
+  form .row-2 {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto; }
+    form .row-2::after {
+      clear: both;
+      content: "";
+      display: table; }
+    form .row-2 select {
+      float: left;
+      display: block;
+      margin-right: 2.3576515979%;
+      width: 48.821174201%;
+      border-radius: 0px;
+      margin-bottom: 13px; }
+      form .row-2 select:last-child {
+        margin-right: 0; }
+      form .row-2 select option {
+        background: black; }
+  form .row-3 {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto; }
+    form .row-3::after {
+      clear: both;
+      content: "";
+      display: table; }
+    form .row-3 input[type="text"] {
+      float: left;
+      display: block;
+      margin-right: 2.3576515979%;
+      width: 48.821174201%; }
+      form .row-3 input[type="text"]:last-child {
+        margin-right: 0; }
+  form textarea {
+    resize: none; }
+  form .cta--submit {
+    max-width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; }
+    form .cta--submit::after {
+      clear: both;
+      content: "";
+      display: table; }
+    form .cta--submit input[type="submit"] {
+      text-align: center;
+      margin: 30px auto;
+      font-weight: 100;
+      font-size: 18px;
+      color: #FFF;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 4px;
+      padding: 15px;
+      transition: 0.3s ease-in-out;
+      background: transparent; }
+      form .cta--submit input[type="submit"] a {
+        color: #FFF;
+        transition: 0.3s ease-in-out; }
+      form .cta--submit input[type="submit"]:hover {
+        background: rgba(255, 255, 255, 0.25); }
