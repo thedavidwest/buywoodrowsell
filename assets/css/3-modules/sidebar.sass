@@ -1,0 +1,121 @@
+.page-content
+  position: relative
+  z-index: 0
+  +transition()
+
+.toggle
+  cursor: pointer
+  +position(fixed, 40px 0 0 25px)
+  +transition()
+  z-index: 1
+  +size(40px)
+  +display(flex)
+  background: transparent
+  span,
+  span:before,
+  span:after
+    content: ""
+    display: block
+    height: 3px
+    width: 100%
+    background: $trans-white
+    position: relative
+    transition: all 0.3s ease-in-out
+
+  span:before
+    top: 15px
+
+  span:after
+    top: -17px
+
+  &.is-open span
+    background: transparent
+
+  &.is-open span:before,
+  &.is-open span:after
+    transform-origin: center
+    transform: rotate(45deg)
+    top: 0
+    background: $trans-white-dark
+
+  &.is-open span:before
+    transform: rotate(-45deg)
+.mobile-nav.is-open
+  display: block
+  transform: translateY(0%)
+  transition: .3s ease-in-out
+  z-index: 1
+
+.sidebar
+  +transition()
+  +position(fixed, 0px 0 0px -100vw)
+  width: 100vw
+  height: 100%
+  padding: 20px
+  z-index: 0
+  background: $purple
+  text-align: center
+  padding-top: 85px
+
+  h3
+    font:
+      weight: 100
+      size: 24px
+    letter-spacing: .15em
+    text-transform: uppercase
+    color: #FFF
+
+  h1
+    font:
+      weight: 800
+      size: 50px
+    letter-spacing: .15em
+    text-transform: uppercase
+
+  .bwslogo
+    background:
+      image: url('../img/2x4logo.svg')
+      repeat: no-repeat
+    width: 35px
+    height: 50px
+    margin: 45px auto 25px auto
+    opacity: .5
+
+  .info-boxes
+    +outer-container(75%)
+    margin-top: 50px
+    .ben-box, .david-box
+      +span-columns(6)
+      color: $trans-white-dark
+      h1
+        font:
+          weight: 800
+          size: 36px
+        letter-spacing: .15em
+        text-transform: uppercase
+        margin: 5px
+      h2
+        font:
+          weight: 100
+          size: 30px
+        letter-spacing: .15em
+        text-transform: uppercase
+        margin-bottom: 15px
+      p
+        padding: 0px 10px
+        color: $trans-white
+        +white-link
+        a
+          &:hover
+            color: $trans-white-dark
+#sidebartoggler
+  display: none
+  &:checked + .page-wrap
+    .sidebar
+      left: 0px
+      //min-height: 100%
+      overflow: scroll
+    .toggle
+      left: 95%
+    .page-content
+      padding-left: 250px

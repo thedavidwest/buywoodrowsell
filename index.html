@@ -10,65 +10,89 @@
     <link rel="stylesheet" href="assets/css/compiled.css">
     <link rel="icon" type="image/png" href="img/favicon.png">
   </head>
-  <body>
-    <header>
-      <div class="bwslogo"></div>
+  <body></body>
+  <input id="sidebartoggler" type="checkbox" name="" value="">
+  <div class="page-wrap">
+    <label for="sidebartoggler" class="toggle"><span></span></label>
+    <div class="page-content">
+      <header>
+        <div class="bwslogo"></div>
+        <h1>B u y &middot; W o o d r o w &middot; S e l l</h1>
+        <h3>We Build Websites</h3>
+        <div class="cta--portfolio"> <a href="#">View Portfolio</a></div>
+      </header>
+      <section class="whyus">
+        <h1 class="divider">What We Do</h1>
+        <p><span>We Build Websites. </span>ipsum dolor sit amet, consectetur adipisicing elit. Unde odio voluptates laudantium suscipit voluptas error nihil minima consequuntur, optio soluta accusantium assumenda architecto eius? Eius similique alias mollitia porro sapiente!</p>
+      </section>
+      <section class="portfolio">
+        <h1 class="divider">Recent Projects</h1>
+        <div class="recent-group">
+          <div class="recent-ind"><a href="#"><img src="assets/img/sample1.png"></a></div>
+          <div class="recent-ind"><a href="#"><img src="assets/img/sample1.png"></a></div>
+        </div>
+        <div class="recent-group">
+          <div class="recent-ind"><a href="#"><img src="assets/img/sample1.png"></a></div>
+          <div class="recent-ind"><a href="#"><img src="assets/img/sample1.png"></a></div>
+        </div>
+        <div class="cta--portfolio"> <a href="#">View Portfolio</a></div>
+      </section>
+      <section class="contact">
+        <h1 class="divider">Contact Us</h1>
+        <p>Not sure what you‘re looking for? Shoot us an email and we can work with you to come up with a design that meets your needs.</p>
+        <div class="cta--email"><a href="mailto:info@buywoodrowsell.com">info@buywoodrowsell.com </a></div>
+        <p>Already know what you‘re looking for? Fill out the form below and let us know what we can do for you.</p>
+        <form>
+          <div class="row-1">
+            <input type="text" name="name" placeholder="Your Name">
+            <input type="text" name="email" placeholder="Your Email">
+          </div>
+          <div class="row-2">
+            <select name="Website Category">
+              <option value="category">Select Website Category</option>
+              <option value="category 1">Category 1</option>
+              <option value="category 2">Category 2</option>
+              <option value="category 3">Category 3</option>
+            </select>
+            <select name="Budget">
+              <option value="budget">Select Budget</option>
+              <option value="budget 1">Budget 1</option>
+              <option value="budget 2">Budget 2</option>
+              <option value="budget 3">Budget 3</option>
+            </select>
+          </div>
+          <div class="row-3">
+            <textarea type="text" name="comment" value="Tell us about your project"></textarea>
+          </div>
+          <div class="cta--submit">
+            <input type="submit" value="Submit">
+          </div>
+        </form>
+      </section>
+      <footer>
+        <p>©2015 Buywoodrowsell | Buy, sell... buy. sell.</p>
+      </footer>
+    </div>
+    <div class="sidebar">
+      <h3>The Creatives Behind</h3>
       <h1>B u y &middot; W o o d r o w &middot; S e l l</h1>
-      <h3>We Build Websites</h3>
-      <div class="cta--portfolio"> <a href="#">View Portfolio</a></div>
-    </header>
-    <section class="whyus">
-      <h1 class="divider">What We Do</h1>
-      <p><span>We Build Websites. </span>ipsum dolor sit amet, consectetur adipisicing elit. Unde odio voluptates laudantium suscipit voluptas error nihil minima consequuntur, optio soluta accusantium assumenda architecto eius? Eius similique alias mollitia porro sapiente!</p>
-    </section>
-    <section class="portfolio">
-      <h1 class="divider">Recent Projects</h1>
-      <div class="recent-group">
-        <div class="recent-ind"><img src="assets/img/sample1.png"></div>
-        <div class="recent-ind"><img src="assets/img/sample1.png"></div>
+      <div class="bwslogo"></div>
+      <div class="info-boxes">
+        <div class="ben-box">
+          <h1>Ben Beard</h1>
+          <h2>The Code</h2>
+          <p>Artisan Pinterest hella, tofu iPhone meggings chambray normcore Wes Anderson 90's vinyl retro vegan master cleanse Helvetica. Biodiesel American Apparel mumblecore photo booth, Thundercats pug literally meggings.</p>
+          <p> <a href="benabeard.com">benabeard.com</a></p>
+        </div>
+        <div class="david-box">
+          <h1>David West</h1>
+          <h2>The Design</h2>
+          <p>Artisan Pinterest hella, tofu iPhone meggings chambray normcore Wes Anderson 90's vinyl retro vegan master cleanse Helvetica. Biodiesel American Apparel mumblecore photo booth, Thundercats pug literally meggings.</p>
+          <p> <a href="dwst.cc">dwst.cc</a></p>
+        </div>
       </div>
-      <div class="recent-group">
-        <div class="recent-ind"><img src="assets/img/sample1.png"></div>
-        <div class="recent-ind"><img src="assets/img/sample1.png"></div>
-      </div>
-      <div class="cta--portfolio"> <a href="#">View Portfolio</a></div>
-    </section>
-    <section class="contact">
-      <h1 class="divider">Contact Us</h1>
-      <p>Not sure what you‘re looking for? Shoot us an email and we can work with you to come up with a design that meets your needs.</p><a href="mailto:info@buywoodrowsell.com">
-        <div class="cta--email">info@buywoodrowsell.com </div></a>
-      <p>Already know what you‘re looking for? Fill out the form below and let us know what we can do for you.</p>
-      <form>
-        <div class="row-1">
-          <input type="text" name="name" placeholder="Your Name">
-          <input type="text" name="email" placeholder="Your Email">
-        </div>
-        <div class="row-2">
-          <select name="Website Category">
-            <option value="category">Select Website Category</option>
-            <option value="category 1">Category 1</option>
-            <option value="category 2">Category 2</option>
-            <option value="category 3">Category 3</option>
-          </select>
-          <select name="Budget">
-            <option value="budget">Select Budget</option>
-            <option value="budget 1">Budget 1</option>
-            <option value="budget 2">Budget 2</option>
-            <option value="budget 3">Budget 3</option>
-          </select>
-        </div>
-        <div class="row-3">
-          <textarea type="text" name="comment" value="Tell us about your project"></textarea>
-        </div>
-        <div class="cta--submit">
-          <input type="submit" value="Submit">
-        </div>
-      </form>
-    </section>
-    <footer>
-      <p>©2015 Buywoodrowsell | Buy, sell... buy. sell.</p>
-    </footer>
-  </body>
+    </div>
+  </div>
 </html>
 <script src="assets/js/jquery-2.1.4.min.js"></script>
 <script src="assets/js/functions.js"></script>

@@ -1,0 +1,1 @@
+(function(){var n;$(function(){return n()}),n=function(){$(".toggle").on("click",function(){var n;n=$(this).hasClass("is-open"),n?$(".toggle").removeClass("is-open"):$(".toggle").addClass("is-open")})}}).call(this);

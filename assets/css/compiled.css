@@ -692,3 +692,143 @@ form {
         transition: 0.3s ease-in-out; }
       form .cta--submit input[type="submit"]:hover {
         background: rgba(255, 255, 255, 0.25); }
+
+.page-content {
+  position: relative;
+  z-index: 0;
+  -webkit-transition: all 0.15s ease-out 0s;
+  -moz-transition: all 0.15s ease-out 0s;
+  transition: all 0.15s ease-out 0s; }
+
+.toggle {
+  cursor: pointer;
+  position: fixed;
+  top: 40px;
+  right: 0;
+  bottom: 0;
+  left: 25px;
+  -webkit-transition: all 0.15s ease-out 0s;
+  -moz-transition: all 0.15s ease-out 0s;
+  transition: all 0.15s ease-out 0s;
+  z-index: 1;
+  height: 40px;
+  width: 40px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background: transparent; }
+  .toggle span,
+  .toggle span:before,
+  .toggle span:after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.25);
+    position: relative;
+    transition: all 0.3s ease-in-out; }
+  .toggle span:before {
+    top: 15px; }
+  .toggle span:after {
+    top: -17px; }
+  .toggle.is-open span {
+    background: transparent; }
+  .toggle.is-open span:before, .toggle.is-open span:after {
+    transform-origin: center;
+    transform: rotate(45deg);
+    top: 0;
+    background: rgba(255, 255, 255, 0.5); }
+  .toggle.is-open span:before {
+    transform: rotate(-45deg); }
+
+.mobile-nav.is-open {
+  display: block;
+  transform: translateY(0%);
+  transition: 0.3s ease-in-out;
+  z-index: 1; }
+
+.sidebar {
+  -webkit-transition: all 0.15s ease-out 0s;
+  -moz-transition: all 0.15s ease-out 0s;
+  transition: all 0.15s ease-out 0s;
+  position: fixed;
+  top: 0px;
+  right: 0;
+  bottom: 0px;
+  left: -100vw;
+  width: 100vw;
+  height: 100%;
+  padding: 20px;
+  z-index: 0;
+  background: #4f1736;
+  text-align: center;
+  padding-top: 85px; }
+  .sidebar h3 {
+    font-weight: 100;
+    font-size: 24px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #FFF; }
+  .sidebar h1 {
+    font-weight: 800;
+    font-size: 50px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase; }
+  .sidebar .bwslogo {
+    background-image: url("../img/2x4logo.svg");
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 50px;
+    margin: 45px auto 25px auto;
+    opacity: 0.5; }
+  .sidebar .info-boxes {
+    max-width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px; }
+    .sidebar .info-boxes::after {
+      clear: both;
+      content: "";
+      display: table; }
+    .sidebar .info-boxes .ben-box, .sidebar .info-boxes .david-box {
+      float: left;
+      display: block;
+      margin-right: 2.3576515979%;
+      width: 48.821174201%;
+      color: rgba(255, 255, 255, 0.5); }
+      .sidebar .info-boxes .ben-box:last-child, .sidebar .info-boxes .david-box:last-child {
+        margin-right: 0; }
+      .sidebar .info-boxes .ben-box h1, .sidebar .info-boxes .david-box h1 {
+        font-weight: 800;
+        font-size: 36px;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        margin: 5px; }
+      .sidebar .info-boxes .ben-box h2, .sidebar .info-boxes .david-box h2 {
+        font-weight: 100;
+        font-size: 30px;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        margin-bottom: 15px; }
+      .sidebar .info-boxes .ben-box p, .sidebar .info-boxes .david-box p {
+        padding: 0px 10px;
+        color: rgba(255, 255, 255, 0.25); }
+        .sidebar .info-boxes .ben-box p a, .sidebar .info-boxes .david-box p a {
+          color: #FFF;
+          transition: 0.3s ease-in-out; }
+        .sidebar .info-boxes .ben-box p a:hover, .sidebar .info-boxes .david-box p a:hover {
+          color: rgba(255, 255, 255, 0.5); }
+
+#sidebartoggler {
+  display: none; }
+  #sidebartoggler:checked + .page-wrap .sidebar {
+    left: 0px;
+    overflow: scroll; }
+  #sidebartoggler:checked + .page-wrap .toggle {
+    left: 95%; }
+  #sidebartoggler:checked + .page-wrap .page-content {
+    padding-left: 250px; }
