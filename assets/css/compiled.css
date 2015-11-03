@@ -263,9 +263,6 @@ input[type="color"], input[type="date"], input[type="datetime"], input[type="dat
 select[multiple=multiple],
 textarea {
   background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 3px;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
   box-sizing: border-box;
   font-family: "Roboto", helvetica, "helvetica neue", arial, sans-serif !important;
   font-size: 1em;
@@ -395,8 +392,6 @@ body {
   background-image: linear-gradient(#173f4f, #1b5b9b);
   font-family: "Roboto", sans-serif;
   font-color: rgba(255, 255, 255, 0.25); }
-  body input:-webkit-autofill {
-    background: rgba(255, 255, 255, 0.25); }
 
 header {
   max-width: 90%;
@@ -419,6 +414,8 @@ header {
     font-size: 50px;
     letter-spacing: 0.15em;
     text-transform: uppercase; }
+  header h1.mobile {
+    display: none; }
   header h3 {
     font-weight: 100;
     font-size: 24px;
@@ -428,6 +425,8 @@ header {
     max-width: 30%;
     margin-left: auto;
     margin-right: auto;
+    cursor: pointer;
+    background: transparent;
     margin-top: 185px;
     font-weight: 100;
     font-size: 18px;
@@ -498,42 +497,42 @@ section {
       content: "";
       display: table; }
 
-section.whyus p {
+section#whyus p {
   color: rgba(255, 255, 255, 0.5);
   font-weight: 100;
   font-size: 14px;
   letter-spacing: 0.15em;
   text-align: justify; }
-  section.whyus p span {
+  section#whyus p span {
     text-transform: uppercase; }
 
-section.portfolio .divider {
+section#portfolio .divider {
   margin-bottom: 75px; }
-section.portfolio .recent-group {
+section#portfolio .recent-group {
   max-width: 75%;
   margin-left: auto;
   margin-right: auto; }
-  section.portfolio .recent-group::after {
+  section#portfolio .recent-group::after {
     clear: both;
     content: "";
     display: table; }
-  section.portfolio .recent-group .recent-ind {
+  section#portfolio .recent-group .recent-ind {
     float: left;
     display: block;
     margin-right: 2.3576515979%;
     width: 48.821174201%;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     transition: all 0.2s ease-in-out; }
-    section.portfolio .recent-group .recent-ind:last-child {
+    section#portfolio .recent-group .recent-ind:last-child {
       margin-right: 0; }
-    section.portfolio .recent-group .recent-ind:hover {
+    section#portfolio .recent-group .recent-ind:hover {
       transform: scale(1.1);
-      box-shadow: 0px 0px 10px 10px rgba(28, 40, 52, 0.13); }
-    section.portfolio .recent-group .recent-ind img {
+      box-shadow: 0px 0px 10px 10px rgba(28, 40, 52, 0.3); }
+    section#portfolio .recent-group .recent-ind img {
       height: 100%;
       width: 100%; }
-section.portfolio .cta--portfolio {
+section#portfolio .cta--portfolio {
   max-width: 25%;
   margin-left: auto;
   margin-right: auto;
@@ -548,23 +547,23 @@ section.portfolio .cta--portfolio {
   border-radius: 4px;
   padding: 15px;
   transition: 0.3s ease-in-out; }
-  section.portfolio .cta--portfolio::after {
+  section#portfolio .cta--portfolio::after {
     clear: both;
     content: "";
     display: table; }
-  section.portfolio .cta--portfolio a {
+  section#portfolio .cta--portfolio a {
     color: #FFF;
     transition: 0.3s ease-in-out; }
-  section.portfolio .cta--portfolio:hover {
+  section#portfolio .cta--portfolio:hover {
     background: rgba(255, 255, 255, 0.25); }
 
-section.contact p {
+section#contact p {
   color: rgba(255, 255, 255, 0.5);
   font-weight: 100;
   font-size: 14px;
   letter-spacing: 0.15em;
   text-align: justify; }
-section.contact .cta--email {
+section#contact .cta--email {
   max-width: 30%;
   margin-left: auto;
   margin-right: auto;
@@ -579,16 +578,16 @@ section.contact .cta--email {
   border-radius: 4px;
   padding: 15px;
   transition: 0.3s ease-in-out; }
-  section.contact .cta--email::after {
+  section#contact .cta--email::after {
     clear: both;
     content: "";
     display: table; }
-  section.contact .cta--email a {
+  section#contact .cta--email a {
     color: #FFF;
     transition: 0.3s ease-in-out; }
-  section.contact .cta--email:hover {
+  section#contact .cta--email:hover {
     background: rgba(255, 255, 255, 0.25); }
-section.contact #mainselection {
+section#contact #mainselection {
   overflow: hidden;
   width: 350px;
   -moz-border-radius: 9px 9px 9px 9px;
@@ -596,7 +595,7 @@ section.contact #mainselection {
   border-radius: 9px 9px 9px 9px;
   box-shadow: 1px 1px 11px #330033;
   background: url(“arrow.gif”) no-repeat scroll 319px 5px #58B14C; }
-  section.contact #mainselection select {
+  section#contact #mainselection select {
     border: 0;
     color: #EEE;
     background: transparent;
@@ -616,10 +615,12 @@ form {
     clear: both;
     content: "";
     display: table; }
-  form input[type="text"], form textarea {
+  form input[type="text"], form textarea, form input[placeholder="Your Name"], form input[placeholder="Your Email"] {
     background: rgba(255, 255, 255, 0.25);
     border: 1px solid rgba(255, 255, 255, 0.5);
-    color: rgba(255, 255, 255, 0.5); }
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 100;
+    text-transform: uppercase; }
   form .row-1 {
     max-width: 80%;
     margin-left: auto;
@@ -652,8 +653,6 @@ form {
       margin-bottom: 13px; }
       form .row-2 select:last-child {
         margin-right: 0; }
-      form .row-2 select option {
-        background: black; }
   form .row-3 {
     max-width: 80%;
     margin-left: auto;
@@ -710,8 +709,6 @@ form {
   cursor: pointer;
   position: fixed;
   top: 40px;
-  right: 0;
-  bottom: 0;
   left: 25px;
   -webkit-transition: all 0.15s ease-out 0s;
   -moz-transition: all 0.15s ease-out 0s;
@@ -811,13 +808,13 @@ form {
       .sidebar .info-boxes .ben-box h1, .sidebar .info-boxes .david-box h1 {
         font-weight: 800;
         font-size: 36px;
-        letter-spacing: 0.15em;
+        letter-spacing: 0.25em;
         text-transform: uppercase;
         margin: 5px; }
       .sidebar .info-boxes .ben-box h2, .sidebar .info-boxes .david-box h2 {
         font-weight: 100;
         font-size: 30px;
-        letter-spacing: 0.15em;
+        letter-spacing: 0.25em;
         text-transform: uppercase;
         margin-bottom: 15px; }
       .sidebar .info-boxes .ben-box p, .sidebar .info-boxes .david-box p {
@@ -832,9 +829,86 @@ form {
 #sidebartoggler {
   display: none; }
   #sidebartoggler:checked + .page-wrap .sidebar {
-    left: 0px;
-    overflow: scroll; }
+    left: 0px; }
   #sidebartoggler:checked + .page-wrap .toggle {
     left: 95%; }
-  #sidebartoggler:checked + .page-wrap .page-content {
-    padding-left: 250px; }
+
+nav .nav-position {
+  position: fixed;
+  top: calc(50% - 150px);
+  left: 37px;
+  bottom: 30px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify; }
+  nav .nav-position .site-nav ul {
+    list-style: none;
+    text-transform: uppercase;
+    vertical-align: middle; }
+  nav .nav-position .site-nav a {
+    font-size: 50px;
+    font-weight: 800;
+    text-transform: uppercase;
+    vertical-align: middle;
+    display: block;
+    color: rgba(255, 255, 255, 0.25); }
+    nav .nav-position .site-nav a:hover {
+      color: rgba(255, 255, 255, 0.5); }
+      nav .nav-position .site-nav a:hover li {
+        display: inline-block; }
+    nav .nav-position .site-nav a li {
+      display: none;
+      padding: 5px;
+      margin-bottom: 8px;
+      font-size: 20px;
+      font-weight: 200;
+      vertical-align: middle;
+      line-height: 1;
+      color: rgba(255, 255, 255, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 4px;
+      transition: 0.3s ease-in-out; }
+
+.work {
+  -webkit-transition: all 0.15s ease-out 0s;
+  -moz-transition: all 0.15s ease-out 0s;
+  transition: all 0.15s ease-out 0s;
+  position: fixed;
+  top: 0px;
+  right: -100vw;
+  bottom: 0px;
+  width: 100vw;
+  height: 100%;
+  padding: 20px;
+  z-index: 99;
+  background: #4f1736;
+  text-align: center;
+  padding-top: 85px; }
+
+#worktoggler {
+  display: none; }
+  #worktoggler:checked + .page-wrap .work {
+    right: 0px; }

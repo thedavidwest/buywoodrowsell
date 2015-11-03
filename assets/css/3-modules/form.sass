@@ -1,9 +1,11 @@
 form
   +outer-container(75%)
-  input[type="text"], textarea
+  input[type="text"], textarea, input[placeholder="Your Name"], input[placeholder="Your Email"]
     background: $trans-white
     border: 1px solid $trans-white-dark
     color: $trans-white-dark
+    font-weight: 100
+    text-transform: uppercase
 
   .row-1
     +outer-container(80%)
@@ -15,8 +17,6 @@ form
       +span-columns(6)
       border-radius: 0px
       margin-bottom: 13px
-      option
-        background: black
   .row-3
     +outer-container(80%)
     input[type="text"]

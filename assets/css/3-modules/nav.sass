@@ -1,0 +1,40 @@
+nav
+  .nav-position
+    position: fixed
+    top: calc(50% - 150px)
+    left: 37px
+    bottom: 30px
+    +display(flex)
+    +flex-direction(column)
+    +justify-content(space-between)
+
+    .site-nav
+      ul
+        list-style: none
+        text-transform: uppercase
+        vertical-align: middle
+      a
+        font:
+          size: 50px
+          weight: 800
+        text-transform: uppercase
+        vertical-align: middle
+        display: block
+        color: $trans-white
+        &:hover
+          color: $trans-white-dark
+          li
+            display: inline-block
+        li
+          display: none
+          padding: 5px
+          margin-bottom: 8px
+          font:
+            size: 20px
+            weight: 200
+          vertical-align: middle
+          line-height: 1
+          color: $trans-white-dark
+          border: 1px solid $trans-white
+          border-radius: 4px
+          transition: .3s ease-in-out

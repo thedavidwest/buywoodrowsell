@@ -5,90 +5,115 @@ html(lang="en")
     title Buy Woodrow Sell | Web Designers
     meta(name="description", content="")
     meta(name="author", content="")
-    meta(name="viewport", content="width=device-width, initial-scale=1")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
     link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css")
     link(rel="stylesheet", href="assets/css/compiled.css")
     link(rel="icon", type="image/png", href="img/favicon.png")
 
   body
-  input#sidebartoggler(type='checkbox', name='', value='')
-  .page-wrap
-    label.toggle(for='sidebartoggler')
-      span
-    .page-content
-      header
-        .bwslogo
-        h1 B u y &middot; W o o d r o w &middot; S e l l
-        h3 We Build Websites
-        .cta--portfolio 
-          a(href="#") View Portfolio
-      section.whyus
-        h1.divider What We Do
-        p
-          span We Build Websites. 
-          | ipsum dolor sit amet, consectetur adipisicing elit. Unde odio voluptates laudantium suscipit voluptas error nihil minima consequuntur, optio soluta accusantium assumenda architecto eius? Eius similique alias mollitia porro sapiente!
-      section.portfolio
-        h1.divider Recent Projects
-        .recent-group
-          .recent-ind
-            a(href="#")
-              img(src='assets/img/sample1.png')
-          .recent-ind
-            a(href="#")
-              img(src='assets/img/sample1.png')
-        .recent-group
-          .recent-ind
-            a(href="#")
-              img(src='assets/img/sample1.png')
-          .recent-ind
-            a(href="#")
-              img(src='assets/img/sample1.png')
-        .cta--portfolio 
-          a(href="#") View Portfolio
-      section.contact
-        h1.divider Contact Us
-        p Not sure what you‘re looking for? Shoot us an email and we can work with you to come up with a design that meets your needs.
-        .cta--email
-          a(href="mailto:info@buywoodrowsell.com") info@buywoodrowsell.com 
-        p Already know what you‘re looking for? Fill out the form below and let us know what we can do for you.
-        form
-          .row-1
-            input(type='text', name='name', placeholder='Your Name')
-            input(type='text', name='email', placeholder='Your Email')
-          .row-2
-            select(name='Website Category')
-              option(value='category') Select Website Category
-              option(value='category 1') Category 1
-              option(value='category 2') Category 2
-              option(value='category 3') Category 3
-            select(name='Budget')
-              option(value='budget') Select Budget
-              option(value='budget 1') Budget 1
-              option(value='budget 2') Budget 2
-              option(value='budget 3') Budget 3
-          .row-3
-            textarea(type='text', name='comment', value='Tell us about your project')
-          .cta--submit
-            input(type='submit', value='Submit')
-      footer
-        p ©2015 Buywoodrowsell | Buy, sell... buy. sell.
+    input(type='checkbox', name='', value='', id="sidebartoggler")
+    input(type='checkbox', name='', value='', id="worktoggler")  
+    .page-wrap
+      label.toggle(for='sidebartoggler')
+        span
+      .page-content
       
-    .sidebar
-      h3 The Creatives Behind
-      h1 B u y &middot; W o o d r o w &middot; S e l l
-      .bwslogo
-      .info-boxes
-        .ben-box
-          h1 Ben Beard
-          h2 The Code
-          p Artisan Pinterest hella, tofu iPhone meggings chambray normcore Wes Anderson 90's vinyl retro vegan master cleanse Helvetica. Biodiesel American Apparel mumblecore photo booth, Thundercats pug literally meggings.
-          p 
-            a(href="benabeard.com") benabeard.com
-        .david-box
-          h1 David West
-          h2 The Design
-          p Artisan Pinterest hella, tofu iPhone meggings chambray normcore Wes Anderson 90's vinyl retro vegan master cleanse Helvetica. Biodiesel American Apparel mumblecore photo booth, Thundercats pug literally meggings.
-          p 
-            a(href="dwst.cc") dwst.cc
+        input(type='checkbox', name='', value='', id="worktoggler")
+        nav
+          .nav-position
+            .site-nav
+              ul
+                a(href="#home") &middot;
+                  li Home
+                a(href="#whyus") &middot;
+                  li What We Do
+                a(href="#portfolio") &middot;
+                  li Previous Projects
+                a(href="#contact") &middot;
+                  li Contact
+        header#home
+          .bwslogo
+          h1 B u y &middot; W o o d r o w &middot; S e l l
+          h1.mobile B u y
+          h1.mobile W o o d r o w
+          h1.mobile S e l l
+          h3 We Build Websites
+          label.cta--portfolio(for='worktoggler') View Portfolio
+        section#whyus
+          h1.divider Why Us
+          h1 What We Do
+          p
+            span We Build Websites. 
+            | ipsum dolor sit amet, consectetur adipisicing elit. Unde odio voluptates laudantium suscipit voluptas error nihil minima consequuntur, optio soluta accusantium assumenda architecto eius? Eius similique alias mollitia porro sapiente!            
+          h1 How It Works
+            p
+              span We Build Websites. 
+              | ipsum dolor sit amet, consectetur adipisicing elit. Unde odio voluptates laudantium suscipit voluptas error nihil minima consequuntur, optio soluta accusantium assumenda architecto eius? Eius similique alias mollitia porro sapiente!
+
+        section#portfolio
+          h1.divider Recent Projects
+          .recent-group
+            .recent-ind
+              a(href="#")
+                img(src='assets/img/sample1.png')
+            .recent-ind
+              a(href="#")
+                img(src='assets/img/sample1.png')
+          .recent-group
+            .recent-ind
+              a(href="#")
+                img(src='assets/img/sample1.png')
+            .recent-ind
+              a(href="#")
+                img(src='assets/img/sample1.png')
+          label.cta--portfolio(for='worktoggler')
+            a(href="portfolio.html") View Portfolio
+        section#contact
+          h1.divider Contact Us
+          p Not sure what you‘re looking for? Shoot us an email and we can work with you to come up with a design that meets your needs.
+          .cta--email
+            a(href="mailto:info@buywoodrowsell.com") info@buywoodrowsell.com 
+          p Already know what you‘re looking for? Fill out the form below and let us know what we can do for you.
+          form
+            .row-1
+              input(type='text', name='name', placeholder='Your Name')
+              input(type='text', name='email', placeholder='Your Email')
+            .row-2
+              select(name='Website Category')
+                option(value='category') Select Website Category
+                option(value='category 1') Category 1
+                option(value='category 2') Category 2
+                option(value='category 3') Category 3
+              select(name='Budget')
+                option(value='budget') Select Budget
+                option(value='budget 1') Budget 1
+                option(value='budget 2') Budget 2
+                option(value='budget 3') Budget 3
+            .row-3
+              textarea(type='text', name='comment', placeholder='Tell us about your project')
+            .cta--submit
+              input(type='submit', value='Submit')
+        footer
+          p ©2015 Buywoodrowsell | Buy, sell... buy. sell.    
+      .work
+        h3 The Creatives Behind
+        h1 B u y &middot; W o o d r o w &middot; S e l l
+      .sidebar
+        h3 The Creatives Behind
+        h1 B u y &middot; W o o d r o w &middot; S e l l
+        .bwslogo
+        .info-boxes
+          .ben-box
+            h1 Ben Beard
+            h2 The Code
+            p Artisan Pinterest hella, tofu iPhone meggings chambray normcore Wes Anderson 90's vinyl retro vegan master cleanse Helvetica. Biodiesel American Apparel mumblecore photo booth, Thundercats pug literally meggings.
+            p 
+              a(href="http://benabeard.com", target="_blank") benabeard.com
+          .david-box
+            h1 David West
+            h2 The Design
+            p Artisan Pinterest hella, tofu iPhone meggings chambray normcore Wes Anderson 90's vinyl retro vegan master cleanse Helvetica. Biodiesel American Apparel mumblecore photo booth, Thundercats pug literally meggings.
+            p 
+              a(href="http://dwst.cc", target="_blank") dwst.cc
 script(src="assets/js/jquery-2.1.4.min.js")
 script(src="assets/js/functions.js")
