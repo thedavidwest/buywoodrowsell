@@ -1,6 +1,7 @@
 $ ->
   mobileNav()
   smoothScroll()
+  slideOut()
 
 mobileNav = ->
   $('.toggle').on 'click', ->
@@ -18,5 +19,14 @@ smoothScroll = (duration) ->
     if target.length
       event.preventDefault()
       $('html, body').animate { scrollTop: target.offset().top }, duration
+    return
+  return
+
+slideOut = ->
+  $('.toggle').on 'click', ->
+    $('.sidebar').toggleClass 'sidebar-open'
+    return
+  $('.cta--portfolio, .work-toggle').on 'click', ->
+    $('.work').toggleClass 'work-open'
     return
   return

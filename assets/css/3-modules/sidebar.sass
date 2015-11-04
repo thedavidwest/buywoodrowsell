@@ -108,12 +108,11 @@
         a
           &:hover
             color: $trans-white-dark
-#sidebartoggler
-  display: none
-  &:checked + .page-wrap
-    .sidebar
-      left: 0px
-    .toggle
-      left: 95%
-    .page-content
-      //padding-left: 250px
+
+.is-open
+  left: 95%
+
+.sidebar-open
+  left: 0px
+  .toggle
+    left: 95%

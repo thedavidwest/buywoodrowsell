@@ -8,17 +8,13 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css")
     link(rel="stylesheet", href="assets/css/compiled.css")
-    link(rel="icon", type="image/png", href="img/favicon.png")
+    link(rel="icon", type="image/png", href="assets/img/favicon.png")
 
   body
-    input(type='checkbox', name='', value='', id="sidebartoggler")
-    input(type='checkbox', name='', value='', id="worktoggler")  
     .page-wrap
-      label.toggle(for='sidebartoggler')
+      .toggle
         span
       .page-content
-      
-        input(type='checkbox', name='', value='', id="worktoggler")
         nav
           .nav-position
             .site-nav
@@ -38,7 +34,7 @@ html(lang="en")
           h1.mobile W o o d r o w
           h1.mobile S e l l
           h3 We Build Websites
-          label.cta--portfolio(for='worktoggler') View Portfolio
+          .cta--portfolio View Portfolio
         section#whyus
           h1.divider Why Us
           h1 What We Do
@@ -49,7 +45,6 @@ html(lang="en")
             p
               span We Build Websites. 
               | ipsum dolor sit amet, consectetur adipisicing elit. Unde odio voluptates laudantium suscipit voluptas error nihil minima consequuntur, optio soluta accusantium assumenda architecto eius? Eius similique alias mollitia porro sapiente!
-
         section#portfolio
           h1.divider Recent Projects
           .recent-group
@@ -66,8 +61,7 @@ html(lang="en")
             .recent-ind
               a(href="#")
                 img(src='assets/img/sample1.png')
-          label.cta--portfolio(for='worktoggler')
-            a(href="portfolio.html") View Portfolio
+          .cta--portfolio View Portfolio
         section#contact
           h1.divider Contact Us
           p Not sure what you‘re looking for? Shoot us an email and we can work with you to come up with a design that meets your needs.
@@ -96,8 +90,39 @@ html(lang="en")
         footer
           p ©2015 Buywoodrowsell | Buy, sell... buy. sell.    
       .work
-        h3 The Creatives Behind
+        .work-toggle
+          span
+        .bwslogo
         h1 B u y &middot; W o o d r o w &middot; S e l l
+        h3 Portfolio
+        .work-container
+          .work-row
+            .ind-container
+              a(href="#")
+                img(src='assets/img/sample1.png')
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                span
+                  a(href='#') Visit Site. 
+            .ind-container
+              a(href="#")
+                img(src='assets/img/sample1.png')
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                span
+                  a(href='#') Visit Site.
+          .work-row
+            .ind-container
+              a(href="#")
+                img(src='assets/img/sample1.png')
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                span
+                  a(href='#') Visit Site. 
+            .ind-container
+              a(href="#")
+                img(src='assets/img/sample1.png')
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                span
+                  a(href='#') Visit Site.
+              
       .sidebar
         h3 The Creatives Behind
         h1 B u y &middot; W o o d r o w &middot; S e l l

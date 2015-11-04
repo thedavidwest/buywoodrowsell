@@ -536,6 +536,7 @@ section#portfolio .cta--portfolio {
   max-width: 25%;
   margin-left: auto;
   margin-right: auto;
+  cursor: pointer;
   text-align: center;
   margin-top: 45px;
   font-weight: 100;
@@ -826,11 +827,12 @@ form {
         .sidebar .info-boxes .ben-box p a:hover, .sidebar .info-boxes .david-box p a:hover {
           color: rgba(255, 255, 255, 0.5); }
 
-#sidebartoggler {
-  display: none; }
-  #sidebartoggler:checked + .page-wrap .sidebar {
-    left: 0px; }
-  #sidebartoggler:checked + .page-wrap .toggle {
+.is-open {
+  left: 95%; }
+
+.sidebar-open {
+  left: 0px; }
+  .sidebar-open .toggle {
     left: 95%; }
 
 nav .nav-position {
@@ -903,12 +905,100 @@ nav .nav-position {
   width: 100vw;
   height: 100%;
   padding: 20px;
-  z-index: 99;
+  z-index: 999;
   background: #4f1736;
   text-align: center;
-  padding-top: 85px; }
+  overflow: scroll; }
+  .work .bwslogo {
+    background-image: url("../img/2x4logo.svg");
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 50px;
+    margin: 25px auto 25px auto;
+    opacity: 0.5; }
+  .work h1 {
+    font-weight: 800;
+    font-size: 50px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase; }
+  .work h3 {
+    font-weight: 100;
+    font-size: 24px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #FFF;
+    margin-bottom: 85px; }
+  .work .work-container {
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto; }
+    .work .work-container::after {
+      clear: both;
+      content: "";
+      display: table; }
+    .work .work-container .work-row .ind-container {
+      float: left;
+      display: block;
+      margin-right: 2.3576515979%;
+      width: 48.821174201%;
+      margin-bottom: 50px; }
+      .work .work-container .work-row .ind-container:last-child {
+        margin-right: 0; }
+      .work .work-container .work-row .ind-container p {
+        text-align: left; }
+        .work .work-container .work-row .ind-container p span {
+          text-transform: uppercase; }
+          .work .work-container .work-row .ind-container p span a {
+            color: rgba(255, 255, 255, 0.5);
+            transition: 0.3s ease-in-out; }
+            .work .work-container .work-row .ind-container p span a:hover {
+              color: #FFF; }
+  .work .work-toggle {
+    cursor: pointer;
+    position: absolute;
+    top: 40px;
+    left: 25px;
+    -webkit-transition: all 0.15s ease-out 0s;
+    -moz-transition: all 0.15s ease-out 0s;
+    transition: all 0.15s ease-out 0s;
+    z-index: 1000;
+    height: 40px;
+    width: 40px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    background: transparent; }
+    .work .work-toggle span,
+    .work .work-toggle span:before,
+    .work .work-toggle span:after {
+      content: "";
+      display: block;
+      height: 3px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.25);
+      position: relative;
+      transition: all 0.3s ease-in-out; }
+    .work .work-toggle span:before {
+      top: 15px;
+      transform-origin: center;
+      transform: rotate(-45deg);
+      top: 0;
+      background: rgba(255, 255, 255, 0.5); }
+    .work .work-toggle span:after {
+      top: -17px;
+      transform-origin: center;
+      transform: rotate(45deg);
+      top: 0;
+      background: rgba(255, 255, 255, 0.5); }
+    .work .work-toggle span {
+      background: transparent; }
 
-#worktoggler {
-  display: none; }
-  #worktoggler:checked + .page-wrap .work {
-    right: 0px; }
+.work-open {
+  right: 0px; }
+
+.wtopen {
+  right: 95%; }
