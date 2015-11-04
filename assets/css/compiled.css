@@ -393,6 +393,10 @@ body {
   font-family: "Roboto", sans-serif;
   font-color: rgba(255, 255, 255, 0.25); }
 
+.body-hidden {
+  height: 100vh;
+  overflow: hidden; }
+
 header {
   max-width: 90%;
   margin-left: auto;

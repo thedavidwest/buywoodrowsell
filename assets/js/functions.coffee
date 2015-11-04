@@ -26,7 +26,13 @@ slideOut = ->
   $('.toggle').on 'click', ->
     $('.sidebar').toggleClass 'sidebar-open'
     return
+  $('.toggle').on 'click', ->
+    $('body').toggleClass 'body-hidden'
+    return
   $('.cta--portfolio, .work-toggle').on 'click', ->
     $('.work').toggleClass 'work-open'
+    return
+  $('.cta--portfolio, .work-toggle').on 'click', ->
+    $('body').toggleClass 'body-hidden'
     return
   return
